@@ -1,4 +1,4 @@
-package com.oauth2.oauth2client;
+package com.oauth2;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
