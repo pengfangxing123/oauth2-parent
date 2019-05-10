@@ -8,7 +8,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.4.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>com.oauth2</groupId>
@@ -21,6 +20,7 @@
         <module>oauth2-client</module>
         <module>oauth2-authorization</module>
         <module>oauth2-resource</module>
+        <module>oauth2-dao</module>
         <module>aouth2-common</module>
     </modules>
 
@@ -64,6 +64,8 @@
 
         <spring-boot.version>2.0.5.RELEASE</spring-boot.version>
         <spring.security.oauth2>2.3.4.RELEASE</spring.security.oauth2>
+        <mysql.version>5.1.46</mysql.version>
+        <mybatis-plus-boot-starter.version>3.0.6</mybatis-plus-boot-starter.version>
 
         <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
         <git.commit.id.plugin.version>2.2.5</git.commit.id.plugin.version>
@@ -75,6 +77,19 @@
                 <groupId>org.springframework.security.oauth</groupId>
                 <artifactId>spring-security-oauth2</artifactId>
                 <version>${spring.security.oauth2}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus-boot-starter.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+                <scope>runtime</scope>
             </dependency>
         </dependencies>
 

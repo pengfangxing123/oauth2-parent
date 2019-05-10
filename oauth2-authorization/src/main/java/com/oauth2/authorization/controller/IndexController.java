@@ -1,4 +1,4 @@
-package com.oauth2.controller;
+package com.oauth2.authorization.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

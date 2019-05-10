@@ -1,4 +1,4 @@
-package common;
+package com.oauth2.common.constant;
 
 /**
  * @author Administrator
