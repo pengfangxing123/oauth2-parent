@@ -43,7 +43,6 @@ public class CodeAuthorizationConfig extends AuthorizationServerConfigurerAdapte
 
     /** 密码模式*/
     @Autowired
-    @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
 
     @Override
