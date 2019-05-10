@@ -2,7 +2,6 @@ package com.oauth2.common.constant;
 
 /**
  * @author Administrator
- *
  */
 public class GrantTypes {
     public final static String AUTHORIZATION_CODE ="authorization_code";
