@@ -39,3 +39,24 @@ CREATE TABLE `oauth_refresh_token`  (
   `token` blob NULL,
   `authentication` blob NULL
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Table structure for oauth_approvals
+-- ----------------------------
+CREATE TABLE `oauth_approvals` (
+  `userid` varchar(256) DEFAULT NULL COMMENT '登录的用户名  ',
+  `clientid` varchar(256) DEFAULT NULL COMMENT '客户端ID  ',
+  `scope` varchar(256) DEFAULT NULL COMMENT '申请的权限  ',
+  `status` varchar(32) DEFAULT NULL COMMENT '状态（Approve或Deny）',
+  `expiresat` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '过期时间',
+  `lastmodifiedat` timestamp NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '最终修改时间 '
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Table structure for oauth_code
+-- ----------------------------
+CREATE TABLE `oauth_code` (
+  `code` varchar(256) DEFAULT NULL,
+  `authentication` blob COMMENT '客户信息序列化-用blob或者String'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+

@@ -14,9 +14,9 @@ import java.util.List;
  * @author fangxing.peng
  *
  */
-@Component("clientDetailsService")
-@Scope(proxyMode=ScopedProxyMode.TARGET_CLASS)
-@Primary
+//@Component
+//@Scope(proxyMode=ScopedProxyMode.TARGET_CLASS)
+//@Primary
 public class ClientDetailsServiceImpl implements ClientDetailsService, ClientRegistrationService{
 
 //    @Resource

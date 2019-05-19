@@ -1,26 +1,17 @@
-package com.oauth2.authorization.controller;
+package com.oauth2.sso.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.Random;
-
 /**
  * @author Administrator
  */
 @Controller
-
 public class IndexController {
-
-    @GetMapping("/index/getRandom")
+    @GetMapping("/index/getStr")
     @ResponseBody
-    public int getRandom(){
-        return new Random().nextInt(100);
-    }
-
-    @GetMapping("/login")
-    public String login(){
-        return "login";
+    public String getStr(){
+        return "成功获取到资源";
     }
 }
